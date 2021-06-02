@@ -19,7 +19,7 @@ const httpTrigger: AzureFunction = async function (
         if (getrole) {
             context.res = {
                 status: 200,
-                body: "duplicateUserName"
+                body: "duplicateRoleName"
             };
             return;
         }

@@ -6,7 +6,8 @@
       "direction": "in",
       "name": "req",
       "methods": [
-        "put"
+        "get",
+        "post"
       ]
     },
     {
@@ -15,5 +16,5 @@
       "name": "res"
     }
   ],
-  "scriptFile": "../dist/AssignUserToRole/index.js"
+  "scriptFile": "../dist/DeleteRole/index.js"
 }
