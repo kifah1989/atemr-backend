@@ -63,7 +63,7 @@ const httpTrigger: AzureFunction = async function (
     } catch (error) {
         context.res = {
             status: 500,
-            body: "Error updating a user role",
+            body: "Error deleting a user role",
         };
     }
 }

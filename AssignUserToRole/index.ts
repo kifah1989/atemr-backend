@@ -14,7 +14,7 @@ const httpTrigger: AzureFunction = async function (
     if (!userId || !roleId) {
         context.res = {
             status: 400,
-            body: "FieldsAreRequired",
+            body: "Fields Are Required",
         };
 
         return;
@@ -31,14 +31,14 @@ const httpTrigger: AzureFunction = async function (
         if (!roleId) {
             context.res = {
                 status: 200,
-                body: "missingRole"
+                body: "missing Role data"
             };
             return;
         }
         if (!userId) {
             context.res = {
                 status: 200,
-                body: "missingUser"
+                body: "missing User data"
             };
             return;
         }
@@ -47,7 +47,7 @@ const httpTrigger: AzureFunction = async function (
         if (filter.length > 0) {
             context.res = {
                 status: 200,
-                body: "roleExist"
+                body: "role Exist"
             };
             return;
         }
@@ -61,7 +61,7 @@ const httpTrigger: AzureFunction = async function (
             { $push: { users: ObjectID(userId) } });
         context.res = {
             status: 200,
-            body: "roleAdded"
+            body: "User Added to Role"
         };
     } catch (error) {
         context.res = {

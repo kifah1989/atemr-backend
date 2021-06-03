@@ -19,7 +19,7 @@ const httpTrigger: AzureFunction = async function (
         if (getrole) {
             context.res = {
                 status: 200,
-                body: "duplicateRoleName"
+                body: "duplicate Role Name"
             };
             return;
         }
@@ -44,7 +44,7 @@ const httpTrigger: AzureFunction = async function (
     } catch (error) {
         context.res = {
             status: 500,
-            body: "Error updating role",
+            body: "Error adding role",
         };
     }
 };
