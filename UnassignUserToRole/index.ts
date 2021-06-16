@@ -58,9 +58,9 @@ const httpTrigger: AzureFunction = async function (
         await Roles.findOneAndUpdate(
             { _id: new ObjectID(roleId) },
             { $pull: { users: ObjectID(userId) } });
+        //using key value pair response
         context.res = {
-            status: 200,
-            body: "User Removed from Role"
+            body: {response:"User Removed from Role"}
         };
 
 
